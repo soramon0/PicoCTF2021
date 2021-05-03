@@ -10,7 +10,7 @@ import (
 func main() {
 	pwd, err := ioutil.ReadFile("pw.txt")
 	if err != nil {
-		log.Fatal(pwd)
+		log.Fatal(err)
 	}
 
 	pythonPath, err := exec.LookPath("python3")
