@@ -38,12 +38,12 @@ func rot13(s string) string {
 }
 
 func moveCharchater13(char, bound rune) rune {
-	c := char + 13
 	alphabets_length := rune(26)
+	char += 13
 
-	if c > bound {
-		c = char - alphabets_length + 13
+	if char > bound {
+		char -= alphabets_length
 	}
 
-	return c
+	return char
 }
